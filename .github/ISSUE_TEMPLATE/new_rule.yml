@@ -1,0 +1,46 @@
+name: New rule proposal
+description: Propose a new spec-check rule (e.g. a new class of spec/diff misalignment).
+labels: ["new-rule"]
+body:
+  - type: input
+    id: rule-id
+    attributes:
+      label: Proposed rule_id
+      placeholder: "criterion_without_test"
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: What misalignment does this rule catch?
+      description: Describe the failure mode the rule prevents. Concrete example preferred.
+    validations:
+      required: true
+  - type: textarea
+    id: signal
+    attributes:
+      label: Detection signal
+      description: What deterministic or heuristic signal does the rule use? What collectors does it require?
+    validations:
+      required: true
+  - type: textarea
+    id: knowledge
+    attributes:
+      label: Knowledge grounding
+      description: Which `knowledge/*.md` doc(s) ground this rule? If the rule needs new authority, which canonical source?
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Default severity
+      options: [Critical, High, Medium, Low, Info]
+    validations:
+      required: true
+  - type: textarea
+    id: investigation
+    attributes:
+      label: Sample `recommended_investigation`
+      description: Phrase it as a question for the human. Never an instruction to take action.
+    validations:
+      required: true

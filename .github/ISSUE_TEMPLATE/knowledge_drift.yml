@@ -1,0 +1,29 @@
+name: Knowledge corpus drift
+description: A canonical source has moved, changed, or contradicts what we have on disk.
+labels: ["knowledge-drift"]
+body:
+  - type: input
+    id: file
+    attributes:
+      label: Affected knowledge file
+      placeholder: "knowledge/invest-criteria.md"
+    validations:
+      required: true
+  - type: input
+    id: source-url
+    attributes:
+      label: Canonical source URL
+    validations:
+      required: true
+  - type: textarea
+    id: drift
+    attributes:
+      label: What changed at the source vs. what we ship?
+      description: Paste the relevant diff or describe the change. Update retrieval date + SHA-256 in the file when fixing.
+    validations:
+      required: true
+  - type: textarea
+    id: rules-affected
+    attributes:
+      label: Rules that cite this file
+      description: List `cited_by` entries that may need adjustment.

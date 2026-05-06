@@ -1,0 +1,33 @@
+name: Bug report
+description: Something spec-check did wrong on a real check.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Before filing, please confirm: spec-check is purely read-only on git and Notion. If you observed a write, treat that as a security report and follow `SECURITY.md` instead.
+  - type: input
+    id: version
+    attributes:
+      label: spec-check version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What command did you run and what did you expect vs. observe?
+    validations:
+      required: true
+  - type: textarea
+    id: report-snippet
+    attributes:
+      label: Relevant report.md / findings.yaml snippet
+      description: Paste the section of the report that's wrong. Sanitise any internal page titles or branch names.
+      render: markdown
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: OS, Python version, Notion MCP plugin version.
