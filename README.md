@@ -5,6 +5,8 @@
 [![Built with uv](https://img.shields.io/badge/built%20with-uv-DE5FE9.svg)](https://docs.astral.sh/uv/)
 [![Built with Claude Code](https://img.shields.io/badge/built%20with-Claude%20Code-d97757.svg)](https://www.anthropic.com/claude-code)
 
+![spec-check — Does this PR meet its spec?](docs/hero.png)
+
 **Read-only pre-merge spec review, delivered as a Claude Code skill.** Snapshots a feature branch's git diff and its Notion spec page (via the Notion MCP plugin), evaluates the pair against a hardcoded knowledge corpus (INVEST, AC quality, page conventions, spec-drift), and produces a written analysis (`report.md` + `findings.yaml`) suitable for forwarding to the reviewer.
 
 > Built for the **15-minute "does this PR meet its spec?" review** that engineering managers and tech leads do dozens of times a sprint — every finding grounded in a citable authority, every recommendation phrased as a question rather than an instruction.
